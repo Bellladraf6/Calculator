@@ -1,12 +1,12 @@
 @font-face {
     font-family: "Lifehack-Basic";
-    src: url("../fonts/Lifehack-Basic.otf");
+    src: url("./fonts/Lifehack-Basic.otf");
 }
 
 
 body {
     margin: 0;
-    padding: 0 !important;
+    padding: 0;
     background-color: #f9f8e9;
     font-size: 20px;
 }

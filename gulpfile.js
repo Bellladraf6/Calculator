@@ -16,8 +16,9 @@ const htmlTask = cb => {
 }
 
 const fonts = cb => {
-    src('./fonts/*.otf')
-    .pipe(dest(destinationPath, taskOptions))
+    const fontsPath = `${destinationPath}/fonts`
+    src('./src/fonts/*.otf')
+    .pipe(dest(fontsPath, taskOptions))
     .pipe(browserSync.stream());
 
     cb();
@@ -77,7 +78,7 @@ const defaultTask = () => {
     // watch('src/img/*.png', watchOptions, pngTask).on('change', browserSync.reload);
     watch('./src/*.html', watchOptions, htmlTask).on('change', browserSync.reload);
     watch('./src/*.css', watchOptions, lessTask).on('change', browserSync.reload);
-    watch('./fonts/*.otf', watchOptions, fonts).on('change', browserSync.reload);
+    watch('./src/fonts/*.otf', watchOptions, fonts).on('change', browserSync.reload);
 }
 
 exports.default = defaultTask;
