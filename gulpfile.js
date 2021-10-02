@@ -1,4 +1,4 @@
-const { src, dest, watch } = require('gulp');
+const { src, dest, watch, series } = require('gulp');
 // const less = require('gulp-less');
 const concat = require('gulp-concat');
 const browserSync = require('browser-sync').create();
@@ -81,4 +81,5 @@ const defaultTask = () => {
     watch('./src/fonts/*.otf', watchOptions, fonts).on('change', browserSync.reload);
 }
 
-exports.default = defaultTask;
+// exports.default = defaultTask; 
+exports.default = series(htmlTask, jsTask, lessTask, fonts);
