@@ -32,13 +32,13 @@ const fonts = cb => {
 //     cb();
 // }
 
-// const pngTask = cb => {
-//     src('src/img/*.png')
-//     .pipe(dest('build/img', taskOptions))
-//     .pipe(browserSync.stream());
+const pngTask = cb => {
+    src('src/img/*.png')
+    .pipe(dest('build/img', taskOptions))
+    .pipe(browserSync.stream());
 
-//     cb();
-// }
+    cb();
+}
 
 // const jpgTask = cb => {
 //     src('src/img/*.jpg')
@@ -75,7 +75,7 @@ const defaultTask = () => {
 //  watch('src/video/*.mp4', watchOptions, vidTask).on('change', browserSync.reload);
     watch('./src/*.js', watchOptions, jsTask).on('change', browserSync.reload);
     // watch('src/img/*.jpg', watchOptions, jpgTask).on('change', browserSync.reload);
-    // watch('src/img/*.png', watchOptions, pngTask).on('change', browserSync.reload);
+    watch('src/img/*.png', watchOptions, pngTask).on('change', browserSync.reload);
     watch('./src/*.html', watchOptions, htmlTask).on('change', browserSync.reload);
     watch('./src/*.css', watchOptions, lessTask).on('change', browserSync.reload);
     watch('./src/fonts/*.otf', watchOptions, fonts).on('change', browserSync.reload);

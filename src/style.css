@@ -7,68 +7,95 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #f9f8e9;
-    font-size: 20px;
+    background-image: url(./img/geometry2.png);
+    font-size: 30px;
 }
 
 #calc-container {
-   display: flex;
-   align-items: center;
-   flex-direction: column;
-   width: 320px;
-   margin: 100px auto 0;
-   background-color: #91c3ce;;
-   padding: 25px 10px;
-   box-sizing: border-box;
-   border: 3px solid black;
-   border-radius: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 590px;
+    height: 630px;
+    margin: 100px auto 0;
+    background: linear-gradient(#6486e6, #f5b2b2);
+    padding: 70px 10px 20px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 25px;
+    z-index: 998;
+    box-shadow: 0px 6px 7px #04165270;
 }
 
 #display {
     display: flex;
-    width: 280px;
+    width: 510px;
     justify-content: space-between;
 }
 
 #calc-container .btn, #clear {
-    border: 1px solid black;
+    border: 1px solid #aa3575;
     padding: 10px 30px;
-    width: 60px;
+    width: 110px;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
     font-family: "Lifehack-Basic", serif;
     border-radius: 50px;
-    background-color: #cbdfe9;
+    background-color: #d34694;
     box-shadow: 0 0 3px rgb(0 0 0 / 70%);
     margin: 10px 0;
     cursor: pointer;
-    height: 45px;
+    height: 65px;
+    color: white;
+    user-select: none;
+    box-shadow: 0px 4px 0px #2743a247;
+    display: flex;
+    align-items: center;
 }
 
-#calc-container .btn:hover {
-    background-color: #b0babe !important;
-    box-shadow: 0 0 3px rgb(0 0 0 / 90%) !important;
+#calc-container .btn:hover, #clear:active {
+    /* box-shadow: 0 0 1px 0 #d34694 inset, 0 0 1px 1px #aa3575; */
+    box-shadow: 0px 6px 0px #5670c493;
+    background-color: #b62d78e0;
+}
+
+.btn:active, #clear:active {
+    transform: translate(0px, 3px)
+}
+
+#calc-container .btn:active {
+    box-shadow: 0;
 }
 
 #wrapper {
     display: flex;
     justify-content: space-between;
     font-family: "Lifehack-Basic", serif;
-    width: 280px;
+    width: 490px;
     flex-wrap: wrap;
+    height: 380px;
 }
 
 #calc-container #clear {
-    background-color: #e3e17e;
+    background-color: #614cd7;
     padding: 10px 30px;
-    border: 1px solid black;
+    border: 1px solid #5942d7;
     border-radius: 25px;
-    width: 70px;
+    width: 110px;
+    color: white;
+}
+
+#calc-container #clear:hover, #calc-container .yellow:hover {
+    box-shadow: 0px 4px 0px #5670c493;
+    background-color: #5641ce;
 }
 
 #calc-container .yellow {
-    background-color: #e3e17e;
+    background-color: #614cd7;
+    color: white;
 }
 
 #calc-container #input {
@@ -76,14 +103,27 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 3px rgb(0 0 0 / 70%);
     background-color: white;
-    width: 200px;
+    width: 380px;
     overflow:hidden;
-    border: 1px solid black;
+    border: 1px solid #5942d7;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
     font-family: "Lifehack-Basic", serif;
     margin: 10px 0;
     cursor: pointer;
+    color: #614cd7;
+    user-select: none;
+    box-shadow: 0px 4px 0px #2743a247;
+    display: flex;
+    align-items: center;
+}
+
+#Bella {
+    position: absolute;
+    z-index: 999;
+    width: 260px;
+    top: -8%;
+    left: 55%;
 }
 
