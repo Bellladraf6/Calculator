@@ -81,11 +81,8 @@ body {
 
 #calc-container #clear {
     background-color: #614cd7;
-    padding: 10px 30px;
     border: 1px solid #5942d7;
     border-radius: 25px;
-    width: 110px;
-    color: white;
 }
 
 #calc-container #clear:hover, #calc-container .yellow:hover {

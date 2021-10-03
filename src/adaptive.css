@@ -1,0 +1,127 @@
+
+@media screen and (max-width: 1023px) {
+
+body {
+    font-size: 25px;
+}
+
+#calc-container {
+    width: 480px;
+    height: 520px;
+}
+
+#display {
+    width: 420px;
+}
+
+#calc-container .btn, #calc-container #clear {
+    width: 90px;
+    height: 55px;
+}
+
+#wrapper {
+    width: 400px;
+}
+
+#calc-container #input {
+    width: 300px;
+    height: 55px;
+}
+
+#Bella {
+    width: 200px;
+}
+
+}
+
+@media screen and (max-width: 767px) {
+    #calc-container {
+        width: 360px;
+        height: 450px;
+    }
+
+    #calc-container #input {
+        width: 220px;
+        height: 50px;
+    }
+
+    #wrapper, #display {
+        width: 300px;
+    }
+
+    #calc-container .btn, #calc-container #clear {
+        width: 70px;
+        height: 48px;
+    }
+
+    #Bella {
+        width: 150px;
+        top: -5%;
+    }
+
+}
+
+
+@media screen and (max-width: 424px) {
+
+    body {
+        font-size: 20px;
+    }
+
+    #calc-container {
+        width: 85%;
+        height: 360px;
+        padding: 40px 10px 15px;
+    }
+
+    #display, #wrapper {
+        width: 85%;
+    }
+
+    #calc-container .btn, #calc-container #clear {
+        width: 58px;
+        height: 40px;
+        padding: 10px 20px;
+    }
+
+    #calc-container #input {
+        width: 70%;
+        height: 40px;
+    }
+
+    #Bella {
+        width: 45%;
+        left: 50%;
+        top: -35px;
+    }
+}
+
+
+@media screen and (max-width: 374px) {
+
+    body {
+        font-size: 15px;
+    }
+
+    #calc-container {
+        justify-content: space-between;
+        height: 310px;
+    }
+
+    #calc-container .btn, #calc-container #clear {
+        width: 52px;
+        height: 30px;
+    }
+
+    #wrapper {
+        height: 200px;
+    }
+
+    #Bella {
+        top: -27px;
+    }
+
+    #calc-container #input {
+        height: 30px;
+    }
+}
