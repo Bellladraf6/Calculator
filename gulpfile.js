@@ -58,8 +58,8 @@ const jsTask = cb => {
 
 const lessTask = cb => {
     src('./src/*.css')
-    .pipe(concat('style.css'))
     .pipe(concat('adaptive.css'))
+    .pipe(concat('style.css'))
     .pipe(dest(destinationPath, taskOptions))
     .pipe(browserSync.stream());
 
