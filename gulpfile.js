@@ -82,4 +82,4 @@ const defaultTask = () => {
 }
 
 // exports.default = defaultTask; 
-exports.default = series(htmlTask, jsTask, lessTask, fonts);
+exports.default = series(htmlTask, jsTask, lessTask, fonts, pngTask);
