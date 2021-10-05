@@ -3,7 +3,6 @@
     src: url("./fonts/Lifehack-Basic.otf");
 }
 
-
 body {
     margin: 0;
     padding: 0;
@@ -35,7 +34,8 @@ body {
     justify-content: space-between;
 }
 
-#calc-container .btn, #clear {
+#calc-container .btn,
+#clear {
     border: 1px solid #aa3575;
     padding: 10px 30px;
     width: 110px;
@@ -56,13 +56,15 @@ body {
     align-items: center;
 }
 
-#calc-container .btn:hover, #clear:active {
+#calc-container .btn:hover,
+#clear:active {
     /* box-shadow: 0 0 1px 0 #d34694 inset, 0 0 1px 1px #aa3575; */
     box-shadow: 0px 6px 0px #5670c493;
     background-color: #b62d78e0;
 }
 
-.btn:active, #clear:active {
+.btn:active,
+#clear:active {
     transform: translate(0px, 3px)
 }
 
@@ -85,7 +87,8 @@ body {
     border-radius: 25px;
 }
 
-#calc-container #clear:hover, #calc-container .yellow:hover {
+#calc-container #clear:hover,
+#calc-container .yellow:hover {
     box-shadow: 0px 4px 0px #5670c493;
     background-color: #5641ce;
 }
@@ -101,7 +104,7 @@ body {
     box-shadow: 0 0 3px rgb(0 0 0 / 70%);
     background-color: white;
     width: 380px;
-    overflow:hidden;
+    overflow: hidden;
     border: 1px solid #5942d7;
     box-sizing: border-box;
     display: flex;
@@ -124,3 +127,108 @@ body {
     left: 55%;
 }
 
+@media screen and (max-width: 1023px) {
+    body {
+        font-size: 25px;
+    }
+    #calc-container {
+        width: 480px;
+        height: 520px;
+    }
+    #display {
+        width: 420px;
+    }
+    #calc-container .btn,
+    #calc-container #clear {
+        width: 90px;
+        height: 55px;
+    }
+    #wrapper {
+        width: 400px;
+    }
+    #calc-container #input {
+        width: 300px;
+        height: 55px;
+    }
+    #Bella {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #calc-container {
+        width: 360px;
+        height: 450px;
+    }
+    #calc-container #input {
+        width: 220px;
+        height: 50px;
+    }
+    #wrapper,
+    #display {
+        width: 300px;
+    }
+    #calc-container .btn,
+    #calc-container #clear {
+        width: 70px;
+        height: 48px;
+    }
+    #Bella {
+        width: 150px;
+        top: -5%;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    body {
+        font-size: 20px;
+    }
+    #calc-container {
+        width: 85%;
+        height: 360px;
+        padding: 40px 10px 15px;
+    }
+    #display,
+    #wrapper {
+        width: 85%;
+    }
+    #calc-container .btn,
+    #calc-container #clear {
+        width: 58px;
+        height: 40px;
+        padding: 10px 20px;
+    }
+    #calc-container #input {
+        width: 70%;
+        height: 40px;
+    }
+    #Bella {
+        width: 45%;
+        left: 50%;
+        top: -35px;
+    }
+}
+
+@media screen and (max-width: 374px) {
+    body {
+        font-size: 15px;
+    }
+    #calc-container {
+        justify-content: space-between;
+        height: 310px;
+    }
+    #calc-container .btn,
+    #calc-container #clear {
+        width: 52px;
+        height: 30px;
+    }
+    #wrapper {
+        height: 200px;
+    }
+    #Bella {
+        top: -27px;
+    }
+    #calc-container #input {
+        height: 30px;
+    }
+}

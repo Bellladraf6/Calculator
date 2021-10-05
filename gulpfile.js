@@ -9,8 +9,8 @@ const destinationPath = 'build';
 
 const htmlTask = cb => {
     src('./src/*.html')
-    .pipe(dest(destinationPath, taskOptions))
-    .pipe(browserSync.stream());
+        .pipe(dest(destinationPath, taskOptions))
+        .pipe(browserSync.stream());
 
     cb();
 }
@@ -18,8 +18,8 @@ const htmlTask = cb => {
 const fonts = cb => {
     const fontsPath = `${destinationPath}/fonts`
     src('./src/fonts/*.otf')
-    .pipe(dest(fontsPath, taskOptions))
-    .pipe(browserSync.stream());
+        .pipe(dest(fontsPath, taskOptions))
+        .pipe(browserSync.stream());
 
     cb();
 }
@@ -34,8 +34,8 @@ const fonts = cb => {
 
 const pngTask = cb => {
     src('src/img/*.png')
-    .pipe(dest('build/img', taskOptions))
-    .pipe(browserSync.stream());
+        .pipe(dest('build/img', taskOptions))
+        .pipe(browserSync.stream());
 
     cb();
 }
@@ -50,18 +50,17 @@ const pngTask = cb => {
 
 const jsTask = cb => {
     src('./src/*.js')
-    .pipe(dest(destinationPath, taskOptions))
-    .pipe(browserSync.stream());
+        .pipe(dest(destinationPath, taskOptions))
+        .pipe(browserSync.stream());
 
     cb();
 }
 
 const lessTask = cb => {
-    src('./src/*.css')
-    .pipe(concat('adaptive.css'))
-    .pipe(concat('style.css'))
-    .pipe(dest(destinationPath, taskOptions))
-    .pipe(browserSync.stream());
+    src('./src/*.css') //поменять на less
+        .pipe(concat('style.css'))
+        .pipe(dest(destinationPath, taskOptions))
+        .pipe(browserSync.stream());
 
     cb();
 }
@@ -69,11 +68,11 @@ const lessTask = cb => {
 const defaultTask = () => {
     browserSync.init({
         server: {
-           baseDir: "./build",
-           index: "/index.html"
+            baseDir: "./build",
+            index: "/index.html"
         }
     });
-//  watch('src/video/*.mp4', watchOptions, vidTask).on('change', browserSync.reload);
+    //  watch('src/video/*.mp4', watchOptions, vidTask).on('change', browserSync.reload);
     watch('./src/*.js', watchOptions, jsTask).on('change', browserSync.reload);
     // watch('src/img/*.jpg', watchOptions, jpgTask).on('change', browserSync.reload);
     watch('src/img/*.png', watchOptions, pngTask).on('change', browserSync.reload);
@@ -83,4 +82,4 @@ const defaultTask = () => {
 }
 
 // exports.default = defaultTask; 
-exports.default = series(htmlTask, jsTask, lessTask, fonts, pngTask);
+exports.default = series(htmlTask, jsTask, lessTask, fonts, pngTask, adaptiveTask);
